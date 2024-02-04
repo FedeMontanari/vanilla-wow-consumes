@@ -46,10 +46,6 @@ const dmgList = [
     id: "holywater",
     label: "Stratholme Holy Water",
   },
-  // {
-  //   id: "",
-  //   label: "",
-  // },
 ];
 
 const miscList = [
@@ -60,6 +56,10 @@ const miscList = [
   {
     id: "lip",
     label: "Limited Invulneravility Potion",
+  },
+  {
+    id: "invis",
+    label: "Lesser Invisibility Potion",
   },
   {
     id: "resto",

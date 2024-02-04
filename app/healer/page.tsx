@@ -7,7 +7,7 @@ export default function Healer() {
       <h1 className="text-3xl font-extrabold">Healer Consumes</h1>
       <Tabs defaultValue="dmg">
         <TabsList>
-          <TabsTrigger value="dmg">Damage</TabsTrigger>
+          <TabsTrigger value="dmg">TBD</TabsTrigger>
         </TabsList>
         <TabsContent value="dmg">{/* <List list={dmgList} /> */}</TabsContent>
       </Tabs>
