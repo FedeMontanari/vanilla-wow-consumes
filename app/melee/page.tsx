@@ -118,7 +118,7 @@ const protList = [
   },
   {
     id: "fort",
-    label: "Potion of Fortitude",
+    label: "Elixir of Fortitude",
   },
   {
     id: "armor",
