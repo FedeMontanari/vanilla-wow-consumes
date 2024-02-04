@@ -5,74 +5,34 @@ import { Checkbox } from "./ui/checkbox";
 import { Label } from "./ui/label";
 import { Separator } from "./ui/separator";
 
-const list = [
-  {
-    id: "gfpp",
-    label: "Fire Prot",
-  },
-  {
-    id: "gnpp",
-    label: "Nature Prot",
-  },
-  {
-    id: "gfrostpp",
-    label: "Frost Prot",
-  },
-  {
-    id: "gapp",
-    label: "Arcane Prot",
-  },
-  {
-    id: "gshadowpp",
-    label: "Shadow Prot",
-  },
-  {
-    id: "flask",
-    label: "Flask of Titans",
-  },
-  {
-    id: "alcohol",
-    label: "Alcohol",
-  },
-  {
-    id: "fort",
-    label: "Potion of Fortitude",
-  },
-  {
-    id: "armor",
-    label: "Superior Defense",
-  },
-  {
-    id: "hp5",
-    label: "Troll's Blood",
-  },
-  //   {
-  //     id: "",
-  //     label: "",
-  //   },
-];
-
-export default function ProtList() {
+export default function List({
+  list,
+  localName,
+  ...props
+}: {
+  list: { id: string; label: string }[];
+  localName: string;
+}) {
   const [local, setLocal] = React.useState({});
   const [update, setUpdate] = React.useState<boolean>(false);
 
   React.useEffect(() => {
-    setLocal(JSON.parse(localStorage.getItem("prot") || "{}"));
+    setLocal(JSON.parse(localStorage.getItem(localName) || "{}"));
   }, [update]);
 
   async function onCheck(e: React.MouseEvent<HTMLButtonElement>) {
     //@ts-ignore
     const checked = !(e.target.ariaChecked === "true");
-    const strg = localStorage.getItem("prot");
+    const strg = localStorage.getItem(localName);
     const parsedObj = JSON.parse(strg || "{}");
     //@ts-ignore
     parsedObj[e.target.id] = checked;
-    localStorage.setItem("prot", JSON.stringify(parsedObj));
+    localStorage.setItem(localName, JSON.stringify(parsedObj));
     setUpdate(!update);
   }
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center w-56">
       <ul>
         {list.map((el, i) => {
           return (
