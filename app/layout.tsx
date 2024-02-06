@@ -17,6 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script src="https://wow.zamimg.com/js/tooltips.js" async></script>
+      </head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"

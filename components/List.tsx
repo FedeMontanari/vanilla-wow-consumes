@@ -4,6 +4,9 @@ import React from "react";
 import { Checkbox } from "./ui/checkbox";
 import { Label } from "./ui/label";
 import { Separator } from "./ui/separator";
+import { Item } from "wow-classic-items/types/Item";
+import getFullList, { dullItem } from "@/lib/getFullList";
+import Link from "next/link";
 
 export default function List({
   list,
@@ -15,6 +18,11 @@ export default function List({
 }) {
   const [local, setLocal] = React.useState({});
   const [update, setUpdate] = React.useState<boolean>(false);
+  const [fullList, setFullList] = React.useState<Item[]>([dullItem]);
+
+  React.useEffect(() => {
+    setFullList(getFullList(list));
+  }, []);
 
   React.useEffect(() => {
     setLocal(JSON.parse(localStorage.getItem(localName) || "{}"));
@@ -29,6 +37,12 @@ export default function List({
     parsedObj[e.target.id] = checked;
     localStorage.setItem(localName, JSON.stringify(parsedObj));
     setUpdate(!update);
+  }
+
+  function linkClickHandler(e: React.MouseEvent<HTMLAnchorElement>) {
+    //@ts-ignore
+    const label = e.target.parentElement;
+    label.click();
   }
 
   return (
@@ -46,8 +60,18 @@ export default function List({
                     local[el.id]
                   }
                 />
-                <Label htmlFor={el.id} className="text-md hover:cursor-pointer">
-                  {el.label}
+                <Label
+                  htmlFor={el.id}
+                  className="text-md hover:cursor-pointer"
+                  data-wowhead={`item=${fullList[i]?.itemId}&domain=classic`}
+                >
+                  <Link
+                    href="#"
+                    data-wowhead={`item=${fullList[i]?.itemId}&domain=classic`}
+                    onClick={linkClickHandler}
+                  >
+                    {el.label}
+                  </Link>
                 </Label>
               </li>
               <Separator className="my-1" />

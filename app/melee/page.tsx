@@ -21,15 +21,23 @@ const dmgList = [
   },
   {
     id: "food",
-    label: "Food",
+    label: "Smoked Desert Dumplings",
+  },
+  {
+    id: "food2",
+    label: "Blessed Sunfruit",
   },
   {
     id: "sharpies",
     label: "Elemental Sharpening Stone",
   },
   {
-    id: "blands",
-    label: "Blasted Lands Buffs",
+    id: "blands1",
+    label: "R.O.I.D.S.",
+  },
+  {
+    id: "blands2",
+    label: "Ground Scorpok Assay",
   },
   {
     id: "dynamite",
@@ -51,12 +59,16 @@ const dmgList = [
 
 const miscList = [
   {
-    id: "faplap",
-    label: "Free/Living Action Potion",
+    id: "fap",
+    label: "Free Action Potion",
+  },
+  {
+    id: "lap",
+    label: "Living Action Potion",
   },
   {
     id: "lip",
-    label: "Limited Invulneravility Potion",
+    label: "Limited Invulnerability Potion",
   },
   {
     id: "invis",
@@ -67,8 +79,12 @@ const miscList = [
     label: "Restorative Potion",
   },
   {
-    id: "zanza",
-    label: "Spirit/Swiftness of Zanza",
+    id: "zanza1",
+    label: "Spirit of Zanza",
+  },
+  {
+    id: "zanza2",
+    label: "Swiftness of Zanza",
   },
   {
     id: "sand",
@@ -91,31 +107,35 @@ const miscList = [
 const protList = [
   {
     id: "gfpp",
-    label: "Fire Protection",
+    label: "Greater Fire Protection Potion",
   },
   {
     id: "gnpp",
-    label: "Nature Protection",
+    label: "Greater Nature Protection Potion",
   },
   {
     id: "gfrostpp",
-    label: "Frost Protection",
+    label: "Greater Frost Protection Potion",
   },
   {
     id: "gapp",
-    label: "Arcane Protection",
+    label: "Greater Arcane Protection Potion",
   },
   {
     id: "gshadowpp",
-    label: "Shadow Protection",
+    label: "Greater Shadow Protection Potion",
   },
   {
     id: "flask",
     label: "Flask of the Titans",
   },
   {
-    id: "alcohol",
-    label: "Alcohol",
+    id: "alcohol1",
+    label: "Gordok Green Grog",
+  },
+  {
+    id: "alcohol2",
+    label: "Rumsey Rum Black Label",
   },
   {
     id: "fort",
@@ -127,7 +147,7 @@ const protList = [
   },
   {
     id: "hp5",
-    label: "Troll's Blood Elixir",
+    label: "Strong Troll's Blood Elixir",
   },
   //   {
   //     id: "",
