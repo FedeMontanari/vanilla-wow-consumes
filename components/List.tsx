@@ -40,6 +40,7 @@ export default function List({
   }
 
   function linkClickHandler(e: React.MouseEvent<HTMLAnchorElement>) {
+    e.preventDefault();
     //@ts-ignore
     const label = e.target.parentElement;
     label.click();

@@ -17,7 +17,7 @@ const dmgList = [
   },
   {
     id: "fipower",
-    label: "Elixir of Fire Power",
+    label: "Elixir of Firepower",
   },
   {
     id: "grarcane",
@@ -41,11 +41,15 @@ const dmgList = [
   },
   {
     id: "juju",
-    label: "Juju Guille",
+    label: "Juju Guile",
   },
   {
-    id: "food",
-    label: "Runn Rum Ruber Surprise",
+    id: "food1",
+    label: "Runn Tum Tuber Surprise",
+  },
+  {
+    id: "food2",
+    label: "Nightfin Soup",
   },
   {
     id: "dynamite",
@@ -64,35 +68,39 @@ const dmgList = [
 const protList = [
   {
     id: "gfpp",
-    label: "Fire Protection",
+    label: "Greater Fire Protection Potion",
   },
   {
     id: "gnpp",
-    label: "Nature Protection",
+    label: "Greater Nature Protection Potion",
   },
   {
     id: "gfrostpp",
-    label: "Frost Protection",
+    label: "Greater Frost Protection Potion",
   },
   {
     id: "gapp",
-    label: "Arcane Protection",
+    label: "Greater Arcane Protection Potion",
   },
   {
     id: "gshadowpp",
-    label: "Shadow Protection",
+    label: "Greater Shadow Protection Potion",
   },
   {
     id: "fort",
     label: "Elixir of Fortitude",
   },
   {
-    id: "alcohol",
-    label: "Alcohol",
+    id: "alcohol1",
+    label: "Gordok Green Grog",
+  },
+  {
+    id: "alcohol2",
+    label: "Rumsey Rum Black Label",
   },
   {
     id: "hp5",
-    label: "Troll's Blood Elixir",
+    label: "Strong Troll's Blood Elixir",
   },
 ];
 
@@ -102,16 +110,24 @@ const miscList = [
     label: "Major Mana Potion",
   },
   {
-    id: "runes",
-    label: "Dark/Demonic Runes",
+    id: "darkrune",
+    label: "Dark Rune",
   },
   {
-    id: "faplap",
-    label: "Free/Living Action Potion",
+    id: "demrunes",
+    label: "Demonic Rune",
+  },
+  {
+    id: "fap",
+    label: "Free Action Potion",
+  },
+  {
+    id: "lap",
+    label: "Living Action Potion",
   },
   {
     id: "lip",
-    label: "Limited Invulneravility Potion",
+    label: "Limited Invulnerability Potion",
   },
   {
     id: "invis",
@@ -122,8 +138,12 @@ const miscList = [
     label: "Restorative Potion",
   },
   {
-    id: "zanza",
-    label: "Spirit/Swiftness of Zanza",
+    id: "zanza1",
+    label: "Spirit of Zanza",
+  },
+  {
+    id: "zanza2",
+    label: "Swiftness of Zanza",
   },
   {
     id: "sand",
