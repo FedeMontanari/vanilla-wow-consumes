@@ -1,5 +1,7 @@
 import List from "@/components/List";
+import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ArrowLeft, ChevronLeft } from "lucide-react";
 import Link from "next/link";
 
 const dmgList = [
@@ -30,6 +32,10 @@ const dmgList = [
   {
     id: "oil",
     label: "Lesser Wizard Oil",
+  },
+  {
+    id: "blands1",
+    label: "Cerebral Cortex Compound",
   },
   {
     id: "int",
@@ -165,8 +171,13 @@ const miscList = [
 
 export default function Caster() {
   return (
-    <main className="flex min-h-screen flex-col justify-start items-center gap-5 p-24">
-      <Link href="/">{"<< Back"}</Link>
+    <main className="flex min-h-screen flex-col justify-start items-center gap-5 py-12 pb-24">
+      <Button asChild variant="link">
+        <Link href="/" className="flex items-center justify-center">
+          <ChevronLeft className="inline" size={20} />{" "}
+          <ChevronLeft className="inline -ml-4" size={20} /> Back
+        </Link>
+      </Button>
       <h1 className="text-3xl font-extrabold">Caster DPS</h1>
       <Tabs defaultValue="dmg">
         <TabsList>
