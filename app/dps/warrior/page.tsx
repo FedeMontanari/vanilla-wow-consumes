@@ -157,7 +157,7 @@ const protList = [
   //   },
 ];
 
-export default function Melee() {
+export default function WarriorDps() {
   return (
     <main className="flex min-h-screen flex-col justify-start items-center gap-5 py-12 pb-24">
       <Button asChild variant="link">
@@ -166,7 +166,7 @@ export default function Melee() {
           <ChevronLeft className="inline -ml-4" size={20} /> Back
         </Link>
       </Button>
-      <h1 className="text-3xl font-extrabold">Warrior DPS</h1>
+      <h1 className="text-3xl font-extrabold">Melee DPS</h1>
       <Tabs defaultValue="dmg">
         <TabsList>
           <TabsTrigger value="dmg">Damage</TabsTrigger>
