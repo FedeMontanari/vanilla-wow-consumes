@@ -1,32 +1,15 @@
 import List from "@/components/List";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import dps from "@/lib/specs/dps";
+import classes from "@/lib/consumesList";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 
-enum DpsSpecs {
-  warrior = "warrior",
-  rogue = "rogue",
-  hunter = "hunter",
-  priest = "priest",
-  mage = "mage",
-  warlock = "warlock",
-  feral = "kitty",
-  balance = "boomie",
-  enhance = "enhance",
-  elemental = "elemental",
-}
+const dmgList = classes.warrior.dmg;
+const protList = classes.warrior.prot;
+const miscList = classes.warrior.misc;
 
-export default function Dps({
-  params,
-}: {
-  params: { spec: DpsSpecs };
-}) {
-  const camelName = params.spec.charAt(0).toUpperCase() + params.spec.slice(1);
-
-  const list = dps[params.spec];
-
+export default function WarriorDps() {
   return (
     <main className="flex min-h-screen flex-col justify-start items-center gap-5 py-12 pb-24">
       <Button asChild variant="link">
@@ -35,7 +18,7 @@ export default function Dps({
           <ChevronLeft className="inline -ml-4" size={20} /> Back
         </Link>
       </Button>
-      <h1 className="text-3xl font-extrabold">{camelName} DPS</h1>
+      <h1 className="text-3xl font-extrabold">Melee DPS</h1>
       <Tabs defaultValue="dmg">
         <TabsList>
           <TabsTrigger value="dmg">Damage</TabsTrigger>
@@ -43,13 +26,13 @@ export default function Dps({
           <TabsTrigger value="misc">Misc</TabsTrigger>
         </TabsList>
         <TabsContent value="dmg">
-          <List list={list.dmg} localName={`${params.spec}dps-dps`} />
+          <List list={dmgList} localName="wardps-dps" />
         </TabsContent>
         <TabsContent value="prot">
-          <List list={list.prot} localName={`${params.spec}dps-prot`} />
+          <List list={protList} localName="wardps-prot" />
         </TabsContent>
         <TabsContent value="misc">
-          <List list={list.misc} localName={`${params.spec}dps-misc`} />
+          <List list={miscList} localName="wardps-misc" />
         </TabsContent>
       </Tabs>
     </main>

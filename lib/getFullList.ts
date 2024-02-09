@@ -28,10 +28,10 @@ export const dullItem: Item = {
   vendorPrice: 0,
 };
 
-export default function getFullList(list: { id: string; label: string }[]) {
+export default function getFullList(list: { slug: string; name: string }[]) {
   const arr = list.map((it) => {
     //@ts-ignore
-    const item = items.find((el) => el.name == it.label);
+    const item = items.find((el) => el.name == it.name);
     if (item) {
       return item;
     } else {

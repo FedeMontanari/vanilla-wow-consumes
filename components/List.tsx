@@ -13,7 +13,7 @@ export default function List({
   localName,
   ...props
 }: {
-  list: { id: string; label: string }[];
+  list: { slug: string; name: string }[];
   localName: string;
 }) {
   const [local, setLocal] = React.useState({});
@@ -54,7 +54,7 @@ export default function List({
             <div key={i}>
               <li className="flex items-center space-x-2 hover:bg-muted transition duration-150 p-2 rounded-md">
                 <Checkbox
-                  id={el.id}
+                  id={el.slug}
                   onClick={onCheck}
                   checked={
                     //@ts-ignore
@@ -62,7 +62,7 @@ export default function List({
                   }
                 />
                 <Label
-                  htmlFor={el.id}
+                  htmlFor={el.slug}
                   className="text-md hover:cursor-pointer"
                   data-wowhead={`item=${fullList[i]?.itemId}&domain=classic`}
                 >
@@ -71,7 +71,7 @@ export default function List({
                     data-wowhead={`item=${fullList[i]?.itemId}&domain=classic`}
                     onClick={linkClickHandler}
                   >
-                    {el.label}
+                    {el.name}
                   </Link>
                 </Label>
               </li>
