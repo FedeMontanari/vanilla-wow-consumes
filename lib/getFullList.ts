@@ -1,5 +1,6 @@
 import { Item } from "wow-classic-items/types/Item";
 import untypedData from "@/lib/data/data.json";
+import NameSlug from "./types/NameSlug";
 
 //@ts-ignore
 const items: Item[] = untypedData;
@@ -28,7 +29,7 @@ export const dullItem: Item = {
   vendorPrice: 0,
 };
 
-export default function getFullList(list: { slug: string; name: string }[]) {
+export default function getFullList(list: NameSlug[]) {
   const arr = list.map((it) => {
     //@ts-ignore
     const item = items.find((el) => el.name == it.name);

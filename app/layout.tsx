@@ -29,10 +29,10 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        <footer>
+          <Footer />
+        </footer>
       </body>
-      <footer>
-        <Footer />
-      </footer>
     </html>
   );
 }
