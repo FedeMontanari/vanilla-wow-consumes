@@ -69,7 +69,7 @@ const hunter = {
 };
 
 const priest = {
-  dmg: [],
+  dmg: [consumes.dmg.supremePowerFlask, consumes.dmg.shadowPower],
   prot: [],
   misc: [],
 };
@@ -81,7 +81,7 @@ const mage = {
 };
 
 const warlock = {
-  dmg: [],
+  dmg: [consumes.dmg.supremePowerFlask, consumes.dmg.shadowPower],
   prot: [],
   misc: [],
 };
