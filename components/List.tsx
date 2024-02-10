@@ -7,27 +7,31 @@ import { Separator } from "./ui/separator";
 import { Item } from "wow-classic-items/types/Item";
 import getFullList, { dullItem } from "@/lib/getFullList";
 import Link from "next/link";
+import NameSlug from "@/lib/types/NameSlug";
 
 export default function List({
   list,
   localName,
   ...props
 }: {
-  list: { slug: string; name: string }[];
+  list: NameSlug[];
   localName: string;
 }) {
   const [local, setLocal] = React.useState({});
   const [update, setUpdate] = React.useState<boolean>(false);
   const [fullList, setFullList] = React.useState<Item[]>([dullItem]);
 
+  // Get database list for wowhead anchor tooltips
   React.useEffect(() => {
     setFullList(getFullList(list));
   }, []);
 
+  // Set the localStorage item when checkbox is clicked (update trigger)
   React.useEffect(() => {
     setLocal(JSON.parse(localStorage.getItem(localName) || "{}"));
   }, [update]);
 
+  // Invert the delayed boolean. Assign the value to the localStorage object and save it. Trigger update
   async function onCheck(e: React.MouseEvent<HTMLButtonElement>) {
     //@ts-ignore
     const checked = !(e.target.ariaChecked === "true");
@@ -39,6 +43,7 @@ export default function List({
     setUpdate(!update);
   }
 
+  // Anchor behavior override to use wowhead tooltips. Triggers a click event on parent element (checkbox's label)
   function linkClickHandler(e: React.MouseEvent<HTMLAnchorElement>) {
     e.preventDefault();
     //@ts-ignore
@@ -58,7 +63,7 @@ export default function List({
                   onClick={onCheck}
                   checked={
                     //@ts-ignore
-                    local[el.id]
+                    local[el.slug]
                   }
                 />
                 <Label

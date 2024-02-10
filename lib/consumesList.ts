@@ -53,6 +53,14 @@ const dmg = {
     slug: "holywater",
     name: "Stratholme Holy Water",
   },
+  supremePowerFlask: {
+    slug: "supremeflask",
+    name: "Flask of Supreme Power",
+  },
+  shadowPower: {
+    slug: "elixirshadow",
+    name: "Elixir of Shadow Power",
+  },
 };
 
 const basicDmg = [
