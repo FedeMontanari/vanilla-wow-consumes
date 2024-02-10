@@ -115,7 +115,76 @@ const misc = {
     slug: "douse",
     name: "Aqual Quintessence",
   },
-  // Reagents
+  reagents: {
+    mage: {
+      teleport: {
+        slug: "runetp",
+        name: "Rune of Teleportation",
+      },
+      portal: {
+        slug: "runeportal",
+        name: "Rune of Portals",
+      },
+      ai: {
+        slug: "intbuff",
+        name: "Arcane Powder",
+      },
+    },
+    rogue: {
+      vanish: {
+        slug: "powderflash",
+        name: "Flash Powder",
+      },
+      blind: {
+        slug: "powderblind",
+        name: "Blinding Powder",
+      },
+    },
+    druid: {
+      bres: {
+        slug: "bres",
+        name: "Ironwood Seed",
+      },
+      gotw: {
+        slug: "gotw",
+        name: "Wild Thornroot",
+      },
+    },
+    priest: {
+      prayer: {
+        slug: "candle",
+        name: "Sacred Candle",
+      },
+    },
+    shaman: {
+      ankh: {
+        slug: "ankh",
+        name: "Ankh",
+      },
+      oil: {
+        slug: "fishoil",
+        name: "Fish Oil",
+      },
+    },
+    warlock: {
+      shard: {
+        slug: "shard",
+        name: "Soul Shard",
+      },
+      infernal: {
+        slug: "infernal",
+        name: "Infernal Stone",
+      },
+      doom: {
+        slug: "demonicfigurine",
+        name: "Demonic Figurine",
+      },
+    },
+    feather: {
+      slug: "lightfeather",
+      name: "Light Feather",
+    },
+  },
 };
 
 const basicMisc = [

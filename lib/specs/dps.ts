@@ -59,7 +59,10 @@ const rogue = {
     consumes.prot.hp5,
     consumes.prot.titansFlask,
   ],
-  misc: [],
+  misc: [
+    consumes.misc.reagents.rogue.blind,
+    consumes.misc.reagents.rogue.vanish,
+  ],
 };
 
 const hunter = {
@@ -71,43 +74,52 @@ const hunter = {
 const priest = {
   dmg: [],
   prot: [],
-  misc: [],
+  misc: [consumes.misc.reagents.priest.prayer, consumes.misc.reagents.feather],
 };
 
 const mage = {
   dmg: [],
   prot: [],
-  misc: [],
+  misc: [
+    consumes.misc.reagents.mage.ai,
+    consumes.misc.reagents.mage.portal,
+    consumes.misc.reagents.mage.teleport,
+    consumes.misc.reagents.feather,
+  ],
 };
 
 const warlock = {
   dmg: [],
   prot: [],
-  misc: [],
+  misc: [
+    consumes.misc.reagents.warlock.doom,
+    consumes.misc.reagents.warlock.infernal,
+    consumes.misc.reagents.warlock.shard,
+  ],
 };
 
 const kitty = {
   dmg: [],
   prot: [],
-  misc: [],
+  misc: [consumes.misc.reagents.druid.bres, consumes.misc.reagents.druid.gotw],
 };
 
 const boomie = {
   dmg: [],
   prot: [],
-  misc: [],
+  misc: [consumes.misc.reagents.druid.bres, consumes.misc.reagents.druid.gotw],
 };
 
 const enhance = {
   dmg: [],
   prot: [],
-  misc: [],
+  misc: [consumes.misc.reagents.shaman.ankh, consumes.misc.reagents.shaman.oil],
 };
 
 const elemental = {
   dmg: [],
   prot: [],
-  misc: [],
+  misc: [consumes.misc.reagents.shaman.ankh, consumes.misc.reagents.shaman.oil],
 };
 
 const classes = [

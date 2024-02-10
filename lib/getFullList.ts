@@ -4,26 +4,49 @@ import untypedData from "@/lib/data/data.json";
 //@ts-ignore
 const items: Item[] = untypedData;
 
+// {
+// "itemId": 0,
+// "name": "",
+// "icon": "",
+// "class": "Consumable",
+// "subclass": "Alchemy",
+// "sellPrice": 0,
+// "quality": "Common",
+// "itemLevel": 0,
+// "requiredLevel": 0,
+// "slot": "Non-equippable",
+// "tooltip": [
+//   {
+//     "label": ""
+//   },
+// ],
+// "itemLink": "",
+// "source": {
+//   "category": "Vendor"
+// },
+// "uniqueName": ""
+// },
+
 export const dullItem: Item = {
-  class: "Consumable",
-  icon: "",
   itemId: 0,
-  itemLevel: 0,
-  itemLink: "",
   name: "",
-  quality: "Common",
-  requiredLevel: 0,
-  sellPrice: 0,
-  slot: "Non-equippable",
-  source: {
-    category: "Vendor",
-  },
+  icon: "",
+  class: "Consumable",
   subclass: "Alchemy",
+  sellPrice: 0,
+  quality: "Common",
+  itemLevel: 0,
+  requiredLevel: 0,
+  slot: "Non-equippable",
   tooltip: [
     {
       label: "",
     },
   ],
+  itemLink: "",
+  source: {
+    category: "Vendor",
+  },
   uniqueName: "",
   vendorPrice: 0,
 };
