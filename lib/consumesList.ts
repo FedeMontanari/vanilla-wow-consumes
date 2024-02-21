@@ -9,33 +9,59 @@ const dmg = {
     slug: "mightyrage",
     name: "Mighty Rage Potion",
   },
-  jujuPower: {
-    slug: "jujupower",
-    name: "Juju Power",
+  juju: {
+    jujuPower: {
+      slug: "jujupower",
+      name: "Juju Power",
+    },
+    jujuMight: {
+      slug: "jujumight",
+      name: "Juju Might",
+    },
+    jujuGuile: {
+      slug: "jujuguile",
+      name: "Juju Guile",
+    },
   },
-  jujuMight: {
-    slug: "jujumight",
-    name: "Juju Might",
-  },
-  desertDumpling: {
-    slug: "food",
-    name: "Smoked Desert Dumplings",
-  },
-  sunfruit: {
-    slug: "food2",
-    name: "Blessed Sunfruit",
+  food: {
+    desertDumpling: {
+      slug: "food",
+      name: "Smoked Desert Dumplings",
+    },
+    sunfruit: {
+      slug: "food2",
+      name: "Blessed Sunfruit",
+    },
+    grilledSquid: {
+      slug: "food3",
+      name: "Grilled Squid",
+    },
+    runnTumTuber: {
+      slug: "food4",
+      name: "Runn Tum Tuber Surprise",
+    },
+    nightfinSoup: {
+      slug: "food5",
+      name: "Nightfin Soup",
+    },
   },
   eleSharpies: {
     slug: "sharpies",
     name: "Elemental Sharpening Stone",
   },
-  roids: {
-    slug: "blands1",
-    name: "R.O.I.D.S.",
-  },
-  groundAssay: {
-    slug: "blands2",
-    name: "Ground Scorpok Assay",
+  blands: {
+    roids: {
+      slug: "blands1",
+      name: "R.O.I.D.S.",
+    },
+    groundAssay: {
+      slug: "blands2",
+      name: "Ground Scorpok Assay",
+    },
+    cerebralCortex: {
+      slug: "blands3",
+      name: "Cerebral Cortex Compound",
+    },
   },
   dynamite: {
     slug: "dynamite",
@@ -60,6 +86,56 @@ const dmg = {
   shadowPower: {
     slug: "elixirshadow",
     name: "Elixir of Shadow Power",
+  },
+  frostPower: {
+    slug: "elixirfrost",
+    name: "Elixir of Frost Power",
+  },
+  firePower: {
+    slug: "elixirfire",
+    name: "Elixir of Fire Power",
+  },
+  greaterArcane: {
+    slug: "elixirgreatarcane",
+    name: "Greater Arcane Elixir",
+  },
+  arcane: {
+    slug: "elixirarcane",
+    name: "Arcane Elixir",
+  },
+  sages: {
+    slug: "elixirsages",
+    name: "Elixir of the Sages",
+  },
+  oil: {
+    lesserWizard: {
+      slug: "oil1",
+      name: "Lesser Wizard Oil",
+    },
+    lesserMana: {
+      slug: "oil2",
+      name: "Lesser Mana Oil",
+    },
+    wizard: {
+      slug: "oil3",
+      name: "Wizard Oil",
+    },
+    brilWizard: {
+      slug: "oil3",
+      name: "Brilliant Wizard Oil",
+    },
+    brilMana: {
+      slug: "oil4",
+      name: "Brilliant Mana Oil",
+    },
+  },
+  instaPoison: {
+    slug: "instapoison",
+    name: "Instant Poison VI",
+  },
+  thistleTea: {
+    slug: "thistletea",
+    name: "Thistle Tea",
   },
 };
 
@@ -191,6 +267,30 @@ const misc = {
     feather: {
       slug: "lightfeather",
       name: "Light Feather",
+    },
+  },
+  ammo: {
+    arrow: {
+      slug: "ammoarrow",
+      name: "Thorium Headed Arrow",
+    },
+    bullet: {
+      slug: "ammobullet",
+      name: "Thorium Shells",
+    },
+  },
+  mana: {
+    potion: {
+      slug: "majormana",
+      name: "Major Mana Potion",
+    },
+    demonicRune: {
+      slug: "rune1",
+      name: "Demonic Rune",
+    },
+    darkRune: {
+      slug: "rune2",
+      name: "Dark Rune",
     },
   },
 };
